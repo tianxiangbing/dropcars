@@ -1,0 +1,13 @@
+{
+  "index.html": {
+    "resources": [
+      "css.css",
+      "line3.png",
+      "js/dropCars.js",
+      "car1.png",
+      "car.png",
+      "js/JY.js",
+      "car2.png"
+    ]
+  }
+}
