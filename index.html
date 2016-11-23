@@ -23,11 +23,10 @@
 	        wgtVer=inf.version;
 	        console.log("当前应用版本："+wgtVer);
 	    });
-
 	    // 检测更新
 		var checkUrl="http://www.lovewebgames.com/app/dropcars/update/check.html";
 		function checkUpdate(){
-		    plus.nativeUI.showWaiting("检测更新...");
+//		    plus.nativeUI.showWaiting("检测更新...");
 		    var xhr=new XMLHttpRequest();
 		    xhr.onreadystatechange=function(){
 		        switch(xhr.readyState){
@@ -39,7 +38,7 @@
 		                if(wgtVer&&newVer&&(wgtVer!=newVer)){
 		                    downWgt();  // 下载升级包
 		                }else{
-		                    plus.nativeUI.alert("无新版本可更新！");
+//		                    plus.nativeUI.alert("无新版本可更新！");
 		                }
 		            }else{
 		                console.log("检测更新失败！");
@@ -53,6 +52,7 @@
 		    xhr.open('GET',checkUrl);
 		    xhr.send();
 		}
+		checkUpdate();
 		// 下载wgt文件
 		var wgtUrl="http://www.lovewebgames.com/app/dropcars/update/dropcars.wgt";
 		function downWgt(){
